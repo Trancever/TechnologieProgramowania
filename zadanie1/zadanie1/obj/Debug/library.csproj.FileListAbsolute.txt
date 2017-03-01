@@ -1,0 +1,5 @@
+D:\technologieProgramowania\zadanie1\zadanie1\bin\Debug\zadanie1.dll
+D:\technologieProgramowania\zadanie1\zadanie1\bin\Debug\zadanie1.pdb
+D:\technologieProgramowania\zadanie1\zadanie1\obj\Debug\library.csprojResolveAssemblyReference.cache
+D:\technologieProgramowania\zadanie1\zadanie1\obj\Debug\zadanie1.dll
+D:\technologieProgramowania\zadanie1\zadanie1\obj\Debug\zadanie1.pdb
