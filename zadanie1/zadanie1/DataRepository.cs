@@ -8,11 +8,12 @@ namespace library
 {
     class DataRepository
     {
-        public DataRepository()
+        public DataRepository(IDataFiller dataFiller)
         {
-
+            DataFiller = dataFiller;
         }
 
+        private IDataFiller DataFiller;
         private DataContext DataCtx;
     }
 }

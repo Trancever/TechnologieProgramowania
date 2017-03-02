@@ -8,9 +8,11 @@ namespace library
 {
     class Book
     {
-        public Book(long id, string name, string author)
+        private static long numberOfInstances = 0;
+
+        public Book(string name, string author)
         {
-            Id = id;
+            Id = numberOfInstances++;
             Name = name;
             Author = author;
         }
