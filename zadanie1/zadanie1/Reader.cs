@@ -8,13 +8,20 @@ namespace library
 {
     class Reader
     {
-        public Reader(string firstName, string lastName)
+        public Reader(string firstName, string lastName, int age)
         {
-            Firstname = firstName;
+            FirstName = firstName;
             LastName = lastName;
+            Age = age;
         }
 
-        private string Firstname { get; }
+        public string description()
+        {
+            return "Book name is " + FirstName + ". It's author name is " + LastName + "\n";
+        }
+
+        private string FirstName { get; }
         private string LastName { get; }
+        private int Age { get; }
     }
 }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace library
 {
-    public class ClientList
+    class DataRepository
     {
-        public ClientList()
+        public DataRepository()
         {
 
         }
 
-        private List<Reader> readersList;
+        private DataContext DataCtx;
     }
 }

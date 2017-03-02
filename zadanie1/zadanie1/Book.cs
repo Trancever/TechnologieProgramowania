@@ -8,17 +8,14 @@ namespace library
 {
     class Book
     {
-        public Book(string name, string author)
+        public Book(long id, string name, string author)
         {
+            Id = id;
             Name = name;
             Author = author;
         }
 
-        public string description()
-        {
-            return "Book name is " + Name + ". It's author name is " + Author + "\n";
-        }
-
+        private long Id { get; }
         private string Name { get; }
         private string Author { get; }
     }
