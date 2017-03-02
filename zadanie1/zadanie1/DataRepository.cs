@@ -13,14 +13,14 @@ namespace Library
             DataFiller = dataFiller;
             DataCtx = new DataContext();
 
-            DataCtx.BookCatalog = DataFiller.getBookList();
-            DataCtx.ReadersCatalog = DataFiller.getReadersList();
-            DataCtx.RentalCatalog = DataFiller.getRentalsList();
-            DataCtx.StateCatalog = DataFiller.getStatesList();
+            //DataCtx.BookCatalog = DataFiller.getBookList();
+            //DataCtx.ReadersCatalog = DataFiller.getReadersList();
+            //DataCtx.RentalCatalog = DataFiller.getRentalsList();
+            //DataCtx.StateCatalog = DataFiller.getStatesList();
         }
 
         private IDataFiller DataFiller;
-        private DataContext DataCtx;
+        public DataContext DataCtx { get; }
 
         /*********************************
          *       C.R.U.D. methods        *
@@ -35,13 +35,14 @@ namespace Library
             Book book;
             if(!DataCtx.BookCatalog.TryGetValue(id, out book))
             {
-                throw new Exception("BookCatalog does not contain such key - \"" +  id + "\"");
+                throw new KeyNotFoundException("BookCatalog does not contain such key - \"" +  id + "\"");
             }
             return book;
         }
 
         public List<Book> getAllBooks()
         {
+            Console.WriteLine("Here");
             return DataCtx.BookCatalog.Values.ToList<Book>();
         }
 
@@ -61,7 +62,7 @@ namespace Library
         {
             if(!DataCtx.BookCatalog.Remove(id))
             {
-                throw new Exception("BookCatalog does not contain such key - \"" + id + "\"");
+                throw new KeyNotFoundException("BookCatalog does not contain such key - \"" + id + "\"");
             }
         }
     }

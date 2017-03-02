@@ -48,12 +48,12 @@ namespace Library
             StateDescription state1 = new StateDescription(1, "This book is about powerful ring.", new DateTime(2000, 11, 15));
             StateDescription state2 = new StateDescription(2, "This book is about wizards.", new DateTime(2005, 08, 11));
             StateDescription state3 = new StateDescription(3, "Very intresting book for adults.", new DateTime(2009, 1, 1));
-            Dictionary<long, StateDescription> statesList = new Dictionary<long, StateDescription>();
-            statesList.Add(state1.Id, state1);
-            statesList.Add(state2.Id, state2);
-            statesList.Add(state3.Id, state3);
+            Dictionary<long, StateDescription> statesDictionary = new Dictionary<long, StateDescription>();
+            statesDictionary.Add(state1.Id, state1);
+            statesDictionary.Add(state2.Id, state2);
+            statesDictionary.Add(state3.Id, state3);
 
-            return statesList;
+            return statesDictionary;
         }
     }
 }

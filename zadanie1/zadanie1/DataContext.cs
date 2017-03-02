@@ -9,6 +9,14 @@ namespace Library
 {
     public class DataContext
     {
+        public DataContext()
+        {
+            ReadersCatalog = new List<Reader>();
+            BookCatalog = new Dictionary<long, Book>();
+            RentalCatalog = new ObservableCollection<Rental>();
+            StateCatalog = new Dictionary<long, StateDescription>();
+        }
+
         public List<Reader> ReadersCatalog;
         public Dictionary<long, Book> BookCatalog;
         public ObservableCollection<Rental> RentalCatalog;

@@ -12,7 +12,7 @@ namespace Library
 
         public Reader(string firstName, string lastName, int age)
         {
-            Id = NumberOfInstances++;
+            Id = ++NumberOfInstances;
             FirstName = firstName;
             LastName = lastName;
             Age = age;

@@ -12,7 +12,7 @@ namespace Library
 
         public Book(string name, string author)
         {
-            Id = numberOfInstances++;
+            Id = ++numberOfInstances;
             Name = name;
             Author = author;
         }
