@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library
+namespace Library
 {
-    class StateDescription
+    public class StateDescription
     {
         public StateDescription(long id, string bookDescription, DateTime purchaseDate)
         {
@@ -15,7 +15,7 @@ namespace library
             PurchaseDate = purchaseDate;
         }
 
-        private long Id { get; }
+        public long Id { get; }
         private string BookDescription { get; }
         private DateTime PurchaseDate { get; }
     }

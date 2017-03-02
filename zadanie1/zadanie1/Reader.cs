@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library
+namespace Library
 {
-    class Reader
+    public class Reader
     {
         private static long NumberOfInstances = 0;
 
@@ -23,7 +23,7 @@ namespace library
             return "Book name is " + FirstName + ". It's author name is " + LastName + "\n";
         }
 
-        private long Id { get; }
+        public long Id { get; }
         private string FirstName { get; }
         private string LastName { get; }
         private int Age { get; }

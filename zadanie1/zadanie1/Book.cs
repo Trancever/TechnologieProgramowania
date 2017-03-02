@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library
+namespace Library
 {
-    class Book
+    public class Book
     {
         private static long numberOfInstances = 0;
 
@@ -17,7 +17,7 @@ namespace library
             Author = author;
         }
 
-        private long Id { get; }
+        public long Id { get; }
         private string Name { get; }
         private string Author { get; }
     }

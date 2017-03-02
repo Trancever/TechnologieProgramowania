@@ -5,15 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library
+namespace Library
 {
-    class DataContext
+    public class DataContext
     {
-        public DataContext()
-        {
-
-        }
-
         public List<Reader> ReadersCatalog;
         public Dictionary<long, Book> BookCatalog;
         public ObservableCollection<Rental> RentalCatalog;

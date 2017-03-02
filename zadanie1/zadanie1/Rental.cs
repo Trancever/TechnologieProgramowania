@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library
+namespace Library
 {
-    class Rental
+    public class Rental
     {
         public Rental(long readerId, long bookId, DateTime hireDate)
         {
