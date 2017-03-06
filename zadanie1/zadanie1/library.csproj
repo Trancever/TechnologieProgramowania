@@ -30,7 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,10 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
-    <Compile Include="DataContext.cs" />
     <Compile Include="DataFillerImpl.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="IDataFiller.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

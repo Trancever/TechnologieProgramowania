@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class Reader
+    public class Reader : Person
     {
         private static long NumberOfInstances = 0;
 

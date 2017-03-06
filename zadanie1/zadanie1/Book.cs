@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    public class Book
+    public class Book : Item
     {
         private static long numberOfInstances = 0;
 
@@ -20,5 +20,6 @@ namespace Library
         public long Id { get; }
         private string Name { get; }
         private string Author { get; }
+        private int pages { get; }
     }
 }
