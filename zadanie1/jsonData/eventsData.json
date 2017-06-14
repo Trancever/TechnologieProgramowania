@@ -1,0 +1,71 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Library.Event, zadanie1]], mscorlib",
+  "$values": [
+    {
+      "$type": "Library.Rental, zadanie1",
+      "ReturnDate": null,
+      "StateDescription": {
+        "$type": "Library.BookDescription, zadanie1",
+        "Description": "Story of powerful ring",
+        "PurchaseDate": "2000-01-12T00:00:00",
+        "_Purpose": 4,
+        "_Kind": 4,
+        "Item": {
+          "$type": "Library.Book, zadanie1",
+          "Name": "Lord of the rings - The Fellowship of the Ring",
+          "Author": {
+            "$type": "Library.Author, zadanie1",
+            "FirstName": "John",
+            "LastName": "Tolkien",
+            "Age": 81,
+            "Address": "Orania"
+          },
+          "Pages": 412,
+          "PublishingHouse": "XYZ",
+          "Id": "23a1fe5b-a7d2-47c3-a8b7-cd9ab15589f8"
+        }
+      },
+      "Person": {
+        "$type": "Library.Reader, zadanie1",
+        "FirstName": "Dawid",
+        "LastName": "Urbaniak",
+        "Age": 22,
+        "Address": "Brzezna"
+      },
+      "HireDate": "2017-03-25T11:38:54.6032373-07:00"
+    },
+    {
+      "$type": "Library.Rental, zadanie1",
+      "ReturnDate": null,
+      "StateDescription": {
+        "$type": "Library.BookDescription, zadanie1",
+        "Description": "Story of powerful ring",
+        "PurchaseDate": "2003-06-22T00:00:00",
+        "_Purpose": 4,
+        "_Kind": 4,
+        "Item": {
+          "$type": "Library.Book, zadanie1",
+          "Name": "Lord of the rings - The Return of the King",
+          "Author": {
+            "$type": "Library.Author, zadanie1",
+            "FirstName": "John",
+            "LastName": "Tolkien",
+            "Age": 81,
+            "Address": "Orania"
+          },
+          "Pages": 507,
+          "PublishingHouse": "XYZ",
+          "Id": "1920a980-9127-4003-95ef-778252096100"
+        }
+      },
+      "Person": {
+        "$type": "Library.Reader, zadanie1",
+        "FirstName": "Igor",
+        "LastName": "Orynski",
+        "Age": 22,
+        "Address": "Manhatan"
+      },
+      "HireDate": "2017-03-25T11:38:54.6092394-07:00"
+    }
+  ]
+}

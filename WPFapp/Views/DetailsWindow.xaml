@@ -1,0 +1,429 @@
+﻿<Window x:Class="WPFapp.Views.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFapp.Views"
+        xmlns:rules="clr-namespace:WPFapp.ViewModel.Rules"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Title="DetailsWindow" Height="600" Width="800" 
+        DataContext="{Binding Source={StaticResource Locator}, Path=Details}"
+        x:Name="Window">
+    <Grid Background="LightGray">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="Margin" Value="10,5,10,0"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="Foreground" Value="DimGray"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Margin" Value="10,5,10,0"/>
+                        <Setter Property="FontSize" Value="18"/>
+                        <Setter Property="Background" Value="DarkGray"/>
+                        <Setter Property="BorderBrush" Value="White"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Label Grid.Row="0" Grid.Column="0" Content="Name"></Label>
+                <Label Grid.Row="1" Grid.Column="0" Content="ProductNumber"></Label>
+                <Label Grid.Row="2" Grid.Column="0" Content="Color"></Label>
+                <Label Grid.Row="3" Grid.Column="0" Content="SafetyStockLevel"></Label>
+                <Label Grid.Row="4" Grid.Column="0" Content="ReorderPoint"></Label>
+                <Label Grid.Row="5" Grid.Column="0" Content="StandardCost"></Label>
+                <Label Grid.Row="6" Grid.Column="0" Content="ListPrice"></Label>
+                <Label Grid.Row="7" Grid.Column="0" Content="Size"></Label>
+                <Label Grid.Row="8" Grid.Column="0" Content="SizeUnitMeasureCode"></Label>
+                <Label Grid.Row="9" Grid.Column="0" Content="WeightUnitMeasureCode"></Label>
+                <Label Grid.Row="10" Grid.Column="0" Content="Weight"></Label>
+                <Label Grid.Row="11" Grid.Column="0" Content="DaysToManufacture"></Label>
+                <Label Grid.Row="12" Grid.Column="0" Content="ProductLine"></Label>
+                <Label Grid.Row="13" Grid.Column="0" Content="Class"></Label>
+                <Label Grid.Row="14" Grid.Column="0" Content="Style"></Label>
+                <Label Grid.Row="15" Grid.Column="0" Content="ProductSubcategoryID"></Label>
+                <Label Grid.Row="16" Grid.Column="0" Content="ProductModelID"></Label>
+                <Label Grid.Row="17" Grid.Column="0" Content="SellStartDate"></Label>
+                <Label Grid.Row="18" Grid.Column="0" Content="SellEndDate"></Label>
+                <Label Grid.Row="19" Grid.Column="0" Content="DiscontinuedDate"></Label>
+                <Label Grid.Row="20" Grid.Column="0" Content="ModifiedDate"></Label>
+                <Label Grid.Row="21" Grid.Column="0" Content="MakeFlag"></Label>
+                <Label Grid.Row="22" Grid.Column="0" Content="FinishedGoodsFlag"></Label>
+                <TextBox x:Name="NameBox" Grid.Row="0" Grid.Column="1"  >
+                    <TextBox.Text>
+                        <Binding Path="Product.Name" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:StringRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Must be unique.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ProductNumber" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:IntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer, Must be unique.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.Color" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:StringRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Standard color, can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="3" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.SafetyStockLevel" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:IntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="4" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ReorderPoint" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:IntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="5" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.StandardCost" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DecimalRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Money. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="6" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ListPrice" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DecimalRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Money. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="7" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.Size" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableStringRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="8" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.SizeUnitMeasureCode" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableStringRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="9" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.WeightUnitMeasureCode" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableStringRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="10" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.Weight" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableDecimalRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="11" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.DaysToManufacture" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:IntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="12" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ProductLine" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:ProductLineRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Can be \"r, R, m, M, t, T, s, S, empty\".</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="13" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.Class" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:ClassRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Can be \"H, M, L, empty\".</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="14" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.Style" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:StyleRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Can be \"U, M, W, empty\".</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="15" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ProductSubcategoryID" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableIntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="16" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ProductModelID" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:NullableIntegerRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Integer number. Can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="17" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.SellStartDate" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DateTimeRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Date in format DD/MM/YYYY hh/mm/ss. Year > 1970.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="18" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.SellEndDate" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DateTimeRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Date in format DD/MM/YYYY hh/mm/ss. This > SellStartDate. Or can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="19" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.DiscontinuedDate" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DateTimeRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Date in format DD/MM/YYYY hh/mm/ss. Year > 1970. Or can be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="20" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.ModifiedDate" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:DateTimeRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">Date in format DD/MM/YYYY hh/mm/ss. Year > 1970. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="21" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.MakeFlag" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:BoolRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">True or False. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBox Grid.Row="22" Grid.Column="1" >
+                    <TextBox.Text>
+                        <Binding Path="Product.FinishedGoodsFlag" Mode="TwoWay">
+                            <Binding.ValidationRules>
+                                <rules:BoolRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                    <TextBox.ToolTip>
+                        <ToolTip>
+                            <TextBlock FontWeight="Bold">True or False. Can't be empty.</TextBlock>
+                        </ToolTip>
+                    </TextBox.ToolTip>
+                </TextBox>
+            </Grid>
+        </ScrollViewer>
+        <Grid Grid.Row="1" Margin="0,50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Width="100" Grid.Column="0" Content="{Binding Type, Mode=OneWay}" Command="{Binding SaveProductCommand}" CommandParameter="{Binding ElementName=Window}"/>
+            <Button Width="100" Grid.Column="1" Content="Cancel" Command="{Binding CancelCommand}"
+                        CommandParameter="{Binding ElementName=Window}"/>
+        </Grid>
+    </Grid>
+</Window>
+
+
+
+
+
+
+

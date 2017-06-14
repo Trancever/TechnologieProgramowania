@@ -1,0 +1,19 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Library.Person, zadanie1]], mscorlib",
+  "$values": [
+    {
+      "$type": "Library.Reader, zadanie1",
+      "FirstName": "Dawid",
+      "LastName": "Urbaniak",
+      "Age": 22,
+      "Address": "Brzezna"
+    },
+    {
+      "$type": "Library.Reader, zadanie1",
+      "FirstName": "Igor",
+      "LastName": "Orynski",
+      "Age": 22,
+      "Address": "Manhatan"
+    }
+  ]
+}
